@@ -87,7 +87,7 @@ export default {
     min-height: 1px;
 }
 .theme--dark.v-btn.v-btn--has-bg{
-    opacity: 90%;
+    opacity: 0.9;
     border-radius: 30px;
     background-color: #07cb79;
 }
