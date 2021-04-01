@@ -1,0 +1,32 @@
+{
+  "name": "test-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/firebase": "^7.5.0",
+    "@nuxtjs/pwa": "^3.3.5",
+    "cookieparser": "^0.1.0",
+    "firebase": "^8.3.0",
+    "js-cookie": "^2.2.1",
+    "mdbvue": "^6.7.2",
+    "nuxt": "^2.14.12",
+    "swiper": "^5.4.5",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-typical": "^1.6.2",
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.3",
+    "core-js": "^3.9.1",
+    "push-dir": "^0.4.1"
+  }
+}
