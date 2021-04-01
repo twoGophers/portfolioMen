@@ -87,9 +87,9 @@ export default {
 }
 
 @keyframes blocFoto {
-    10% {opacity: 10%; right: -100%}
-    50% {opacity: 50%; right: -50%}
-    100% {opacity: 100%; right: 0%}
+    10% {opacity: 0.1; right: -100%}
+    50% {opacity: 0.5; right: -50%}
+    100% {opacity: 1; right: 0%}
 }
 
 .v-aboutMeMain-item:nth-child(1) {

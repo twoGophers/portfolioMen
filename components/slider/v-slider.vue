@@ -213,7 +213,7 @@ import showItemSlider from "./v-showItemSlider"
         padding: 8px 14px;
         border-radius: 50%;
         background: #07cb79;
-        opacity: 70%;
+        opacity: 0.7;
         transition: 0.3s;
         margin: 1%;
 
