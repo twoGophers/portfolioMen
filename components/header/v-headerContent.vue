@@ -26,6 +26,7 @@
 import vModalForm from "./v-modalForm"
 import typical from "../../plugins/typical"
 
+
 export default {
     name:"v-headerContent",
     data () {
@@ -35,7 +36,7 @@ export default {
     },
     components : {
         vModalForm,
-        typical
+        typical,
     },
     methods: {},
 }
@@ -63,9 +64,13 @@ export default {
         width: auto;
         margin-top: 5%;
         display: flex;
-        flex-direction: row;
+        overflow: hidden;
         .modal-content{
             margin: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
         }
     }
 

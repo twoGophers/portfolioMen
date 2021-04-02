@@ -41,7 +41,7 @@
         <v-btn
             :disabled="!valid"
             color="success"
-            class="mr-4"
+            class="mr-3"
             @click.prevent="validate"
             submit
         >
@@ -50,18 +50,12 @@
     
         <v-btn
             color="error"
-            class="mr-4"
+            class="mr-3"
             @click="reset"
         >
             Сбросить форму
         </v-btn>
     
-        <v-btn
-            color="warning"
-            @click="resetValidation"
-        >
-            Вернуть отправку
-        </v-btn>
         </v-form>
     </v-app>
     </div>
@@ -143,8 +137,7 @@ export default {
 </script>
 
 <style lang="scss">
-.formItem {
-}
+
 @keyframes blink {
   50% { opacity: 0; }
 }

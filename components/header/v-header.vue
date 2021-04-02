@@ -91,6 +91,7 @@ export default {
 
 <style lang="scss">
 .v-header{
+    
     .v-parallax__content{
         background-color:rgba(0,0,0,.3);
     }

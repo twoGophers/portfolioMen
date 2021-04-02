@@ -90,7 +90,7 @@ export default {
         window.addEventListener("scroll", this.onScroll);
         //console.log(this.test2)
 
-//определение ширины и высоты окна
+    //определение ширины и высоты окна
         this.$nextTick(function() {
         window.addEventListener('resize', this.onScroll);
        // window.addEventListener('resize', this.getWindowHeight);

@@ -51,14 +51,16 @@
                     <p>База данных : {{show_item.proectBase}} </p>
                     <p>{{show_item.proectTime}}</p>
                     <p>{{show_item.proectAdaption}}</p>
-                    <p>Ссылка на сайт : <a >{{show_item.proectName}}</a></p>
+                    <p>Ссылка на сайт : 
+                        <a :href="show_item.proectAddress">{{show_item.proectName}}</a>
+                    </p>
                 </div>
                 <div 
                     class="content_video"
                     v-show="showContent"
                     >
                     <iframe
-                        src="https://www.youtube.com/embed/HKRkum6dV-E"
+                        :src="show_item.adressUrl"
                         title="YouTube video player" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -109,8 +111,6 @@ export default {
     border: 1px solid #07cb79;
     padding: 2%;
     border-radius: 10px;
-
-    height: 400px;
 
     .v-showItemSlider_img{
         width: 40%;

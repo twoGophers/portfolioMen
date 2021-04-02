@@ -13,14 +13,17 @@
 import vHeader from "../components/header/v-header"
 import vMain from "../components/main/v-main"
 
+
 export default {
   name: 'app',
   components : {
     vHeader,
-    vMain
+    vMain,
   },
   data () {
-      return {};
+      return {
+        
+      };
     },
 }
 </script>

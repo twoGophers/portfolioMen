@@ -58,6 +58,7 @@ export default {
     transition: 1s;
 
     position: relative;
+    z-index: 1;
 
     .v-aboutMeMain-item-img{
         border: 1px solid #07cb79;
