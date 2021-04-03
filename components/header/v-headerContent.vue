@@ -13,32 +13,91 @@
             
             <span class="userTitle">Разработака web-приложений с нуля по макету и их продвижение</span>
             <div class="headerContentBtn">
+                    <div class="btmModal">
+                        <template>
+                            <v-row
+                                align="center"
+                                justify="space-around"
+                                >
+                                <v-btn 
+                                depressed
+                                @click="showDialog"
+                                >
+                                    Оформить 
+                                </v-btn>
+                            </v-row>
+                        </template>
+                    </div>
 
-                <div data-app class="modal-content">
-                    <vModalForm />
-                </div>
-
+                    <div class="showModal">
+                        <vModalForm 
+                        v-show="showInside"
+                        />
+                    </div>
+                    
             </div>
     </div>
 </template>
 
+
 <script>
+import {eventBus} from "../../plugins/main"
 import vModalForm from "./v-modalForm"
 import typical from "../../plugins/typical"
-
 
 export default {
     name:"v-headerContent",
     data () {
         return{
-           dialog : true
+           showInside: false,
         }
     },
     components : {
         vModalForm,
         typical,
     },
-    methods: {},
+    methods: {
+        showDialog() {
+            this.showInside = true;
+
+            //Следит за кликом вне блока
+
+            // let testShow = this.showInside
+
+            // if(this.showInside == true) {
+            //     setTimeout(function() {
+
+            //         window.addEventListener('click', function(e){
+            //             if (document.querySelector('.v-modalForm').contains(e.target)){
+            //                 console.log("-")
+            //             } else {
+
+            //             }
+            //         })
+            //     }, 1000)
+            // } else {
+            //     console.log("n")
+            // }
+        },
+        onScroll(event) {
+            this.test = document.documentElement.scrollTop;
+            if(this.test > 5) {
+            this.showInside = false;
+            }
+        },
+    },
+    destroy() {
+        window.removeEventListener("scroll", this.onScroll);
+    },
+    mounted() {
+        window.addEventListener("scroll", this.onScroll);
+    },
+    //Закрытие модального окна по нажатию кнопки
+    created() {
+        eventBus.$on("showModal", data => {
+            this.showInside = data;
+        })
+    },
 }
 </script>
 
@@ -65,14 +124,20 @@ export default {
         margin-top: 5%;
         display: flex;
         overflow: hidden;
-        .modal-content{
-            margin: 2%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
+        .btmModal{
+            .row {
+                margin: 0px;
+                .theme--light.v-btn.v-btn--has-bg {
+                    width: 100%;
+                    border-radius: 20px;
+                    background-color: #07cb79;
+                    color: white;
+
+                }
+            }
         }
     }
+
 
 h4{
     transition: 0.3s;

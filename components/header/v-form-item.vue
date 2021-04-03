@@ -55,13 +55,23 @@
         >
             Сбросить форму
         </v-btn>
-    
+        <v-btn
+            width="20%"
+            color="blue"
+            class="mr-3"
+            @click="exit"
+        >
+            Выйти
+        </v-btn>
+
         </v-form>
+
     </v-app>
     </div>
 </template>
 
 <script>
+import {eventBus} from "../../plugins/main"
 
 export default {
   name : "formItem",
@@ -87,7 +97,8 @@ export default {
     ],
     checkbox: false,
     errors: "",
-    itemsArray: []
+    itemsArray: [],
+    window : null
   }),
 
   methods: {
@@ -130,13 +141,33 @@ export default {
     },
     resetValidation () {
       this.$refs.form.resetValidation()
-    }
+    },
+
+    //Закрытие модального окна по нажатию
+    exit () {
+      let testShow = false;
+      eventBus.$emit("showModal", testShow)
+    },
+
   },
 }
 
 </script>
 
 <style lang="scss">
+
+.formItem {
+  .v-application {
+    padding: 5%;
+    border-radius: 2%;
+    height: 50%;
+    .v-application--wrap{
+      min-height: 50%;
+    }
+  } 
+  .v-application--is-ltr{} 
+  .theme--light{}
+}
 
 @keyframes blink {
   50% { opacity: 0; }
@@ -149,4 +180,6 @@ export default {
         display: none;
     }
 }
+
+
 </style>
