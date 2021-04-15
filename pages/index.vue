@@ -103,12 +103,7 @@ body {
   }
 }
 
-// @media screen and (max-width: 670px) {
-//     .v-header .parallaxHeader .header .headerTop ul {
-//         transition: 0.5s;
-//         width: 70%;
-//     }
-// }
+
 
 @media screen and (max-width: 470px) {
   .v-header
@@ -157,24 +152,7 @@ body {
   }
 }
 
-// @media screen and (max-width: 374px) {
-//   .v-header,
-//     .v-parallax,
-//     .header,
-//     .headerContent,
-//     .contactUser,
-//     .contactUser,
-//     .contactUserContainer_block1 {
-//     display: flex;
-//     flex-direction: column;
-//     a {
-//       font-size: 0.9em;
-//     }
-//   }
-//   .v-header .parallaxHeader .header .headerTop ul {
-//     justify-content: space-between;
-//   }
-// }
+
 
 @media screen and (max-width: 360px) {
   .v-header
