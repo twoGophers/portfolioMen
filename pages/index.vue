@@ -159,6 +159,9 @@ body {
     .v-header .parallaxHeader .header .headerContent .v-infoUser {
         padding: 0px;
     }
+    .v-header .parallaxHeader .header .headerTop ul {
+      width: 100%;
+    }
 }
 
 @media screen and (max-width: 360px) { 
@@ -166,6 +169,8 @@ body {
       width: 90%;
       right: 5%;
     }
-    
+    .v-header .parallaxHeader .header .headerTop ul {
+      width: 100%;
+    }
 }
 </style>
