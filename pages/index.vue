@@ -89,6 +89,7 @@ body {
     margin-top: 5px;
     transition: 0.5s;
     justify-content: space-between;
+    display: flex;
   }
   .v-header
     .parallaxHeader

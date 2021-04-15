@@ -148,16 +148,16 @@ export default {
 }
 
 
-@media screen and (max-width: 375px) {
-    .header {
-        .headerTop {
-            ul {
-                display: flex;
-                justify-content: space-between;
-                border: 5px solid black;
-            }
-        }
+// @media screen and (max-width: 375px) {
+//     .header {
+//         .headerTop {
+//             ul {
+//                 display: flex;
+//                 justify-content: space-between;
+//                 border: 5px solid black;
+//             }
+//         }
         
-    }
-}
+//     }
+// }
 </style>
