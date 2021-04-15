@@ -165,8 +165,11 @@ export default {
 
 @media screen and (max-width: 350px){
     .v-header .parallaxHeader .header .headerTop ul {
-        justify-content: center;
         margin: 0px;
+        margin-top: 5px;
+    }
+    .v-header .parallaxHeader .header .headerContent {
+        padding: 0px;
     }
 }
 </style>

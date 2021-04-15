@@ -56,11 +56,14 @@ export default {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 460px) {
     .contactUser .contactUserContainer .contactUserContainer_block1{
         flex-direction: column;
         p{
             margin: 3%;
+        }
+        a {
+            font-size: 0.9em;
         }
     }
 }

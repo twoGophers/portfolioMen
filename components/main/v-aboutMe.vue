@@ -58,6 +58,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    transition: 0.5s;
     .fotoUser{
         width: 20%;
         display: flex;
@@ -91,6 +92,62 @@ export default {
     .infoUser{
         width: 70%;
         padding-left: 5%;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .v-aboutMe {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .fotoUser{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .fotoUser-item{
+                width: 90%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .infoUser{
+            width: 90%;
+            margin-top: 3%;
+        }
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .v-aboutMe {
+        .fotoUser {
+            width: 40%;
+        }
+        .infoUser{
+            width: 100%;
+            padding-left: 0%;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .v-aboutMe {
+        .fotoUser {
+            width: 60%;
+            .fotoUser-name{
+                width: 100%;
+            }
+            .fotoUser-item {
+                width: 65%;
+            }
+        }
+        .infoUser{
+            width: 100%;
+            padding-left: 0%;
+        }
     }
 }
 </style>

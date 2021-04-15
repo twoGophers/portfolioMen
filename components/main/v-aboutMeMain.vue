@@ -39,4 +39,12 @@ export default {
     flex-wrap: wrap;
     justify-items: baseline;
 }
+
+
+@media screen and (max-width: 420px) {
+    .v-aboutMeMain {
+        justify-content: center;
+        align-items: center;
+    }
+}
 </style>

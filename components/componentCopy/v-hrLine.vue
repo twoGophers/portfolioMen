@@ -1,6 +1,6 @@
 <template>
     <div class="v-hrLine">
-        <h4 class="hrLine"
+        <h4 class="hrLine hrLine1"
             @mouseover="mouseEnter"
             @mouseleave="mouseLeave"
             :style="styleRamk"
@@ -59,6 +59,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: nowrap;
     }
 
     &::before,
@@ -86,4 +87,52 @@ export default {
 }
 
 
+
+@media screen and (max-width: 540px){
+    .v-hrLine {
+        .hrLine1{
+            width: 22%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+        .v-hrLine {
+        .hrLine1{
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .v-hrLine {
+        .hrLine1{
+            width: 30%;
+        }
+    }
+}
+
+@media screen and (max-width: 390px){
+    .v-hrLine {
+        .hrLine1{
+            width: 32%;
+        }
+    }
+}
+
+@media screen and (max-width: 373px){
+    .v-hrLine {
+        .hrLine1{
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 350px){
+    .v-hrLine {
+        .hrLine1{
+            width: 45%;
+        }
+    }
+}
 </style>

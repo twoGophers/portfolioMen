@@ -169,6 +169,10 @@ export default {
   .theme--light{}
 }
 
+.mr-3 {
+  margin: 1%;
+}
+
 @keyframes blink {
   50% { opacity: 0; }
 }

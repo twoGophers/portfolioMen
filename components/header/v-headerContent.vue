@@ -173,6 +173,15 @@ h4{
 }
 
 
-
+@media screen and (max-width: 500px) {
+    .v-headerContent{
+        .typicalWrapper{
+            font-size: 1.6em;
+        }
+        span {
+            font-size: 0.9em;
+        }
+    }
+}
 
 </style>

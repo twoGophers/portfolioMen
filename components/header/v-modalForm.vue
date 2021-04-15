@@ -54,5 +54,23 @@ export default {
   100%{bottom: 0%;}
 }
 
+@media screen and (max-width: 1100px) {
+  .v-modalForm {
+    margin-left: 0%;
+  }
+}
 
+@media screen and (max-width: 850px) {
+    .v-modalForm {
+      width: 65%;
+      right: 18%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+  .v-modalForm {
+      width: 90%;
+      right : 5%;
+    }
+}
 </style>
