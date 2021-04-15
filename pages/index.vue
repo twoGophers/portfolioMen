@@ -157,12 +157,12 @@ body {
 }
 
 @media screen and (max-width: 374px) {
-  .v-header
-    .v-parallax
-    .header
-    .headerContent
-    .contactUser
-    .contactUser
+  .v-header,
+    .v-parallax,
+    .header,
+    .headerContent,
+    .contactUser,
+    .contactUser,
     .contactUserContainer_block1 {
     display: flex;
     flex-direction: column;
