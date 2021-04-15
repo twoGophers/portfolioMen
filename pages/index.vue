@@ -89,9 +89,6 @@ body {
       width: 60%;
       right:  20%;
     }
-    .v-header .parallaxHeader .header .headerContent .v-infoUser {
-        width: 100%;
-    }
 }
 
 
@@ -123,9 +120,7 @@ body {
 }
 
 @media screen and (max-width: 420px) {
-    .v-header .parallaxHeader .header .headerContent .v-infoUser {
-        width: 100%;
-    }
+
 }
 
 @media screen and (max-width: 390px) {
@@ -135,10 +130,6 @@ body {
         margin-left: 0px;
         margin-right: 0px;
     }
-    .v-header .parallaxHeader .header .headerContent .v-infoUser {
-        padding: 0px;
-    }
-
 }
 
 @media screen and (max-width: 360px) { 
@@ -146,6 +137,10 @@ body {
       width: 90%;
       right: 5%;
     }
-
+      .v-header .parallaxHeader .header .headerContent .contactUser  .contactUserContainer_block1 {
+        display: flex;
+        flex-direction: column;
+      }
 }
+
 </style>

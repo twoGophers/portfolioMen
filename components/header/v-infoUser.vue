@@ -40,7 +40,7 @@ export default {
         color:transparent;
     }
     .infoUser{
-        width: 80%;
+        width: 100%;
         .nameStyle{
             font-size: 1.5em;
         }
