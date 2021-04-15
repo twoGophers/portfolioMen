@@ -60,10 +60,112 @@ p {
 body {
   margin: 0;
   padding: 0;
+
 }
 .app {
   width: 100%;
 }
 
 
+@media screen and (max-width: 1260px) {
+  .v-header .parallaxHeader .header .headerContent .headerContentBtn .showModal .v-modalForm{
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+    .v-header .parallaxHeader .header .headerContent .contactUser .contactUserContainer{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .v-header .parallaxHeader .header .headerTop ul {
+        margin-top : 10px;
+        transition: 0.5s;
+        width: 50%;
+    }
+      .v-header .parallaxHeader .header .headerContent .headerContentBtn .showModal .v-modalForm{
+      width: 60%;
+      right:  20%;
+    }
+}
+
+
+@media screen and (max-width: 670px) {
+    .v-header .parallaxHeader .header .headerTop ul {
+        transition: 0.5s;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .v-header .parallaxHeader .header .headerTop ul {
+        transition: 0.5s;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .v-header .parallaxHeader .header .headerContent .contactUser .contactUserContainer{
+        width: 100%;
+    }
+    .v-header .parallaxHeader .header .headerContent {
+        padding-left: 0px;
+    }
+    .v-header .parallaxHeader .header .headerContent .headerContentBtn .showModal .v-modalForm{
+      width: 80%;
+      right: 10%;
+    }
+}
+
+@media screen and (max-width: 450px){
+  .v-header .v-parallax .v-parallax__content .header .headerContent .v-headerContent h4 {
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (max-width: 420px) {
+    .v-header .parallaxHeader .header .headerContent .v-infoUser {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .v-header .parallaxHeader .header .headerContent .contactUser .contactUserContainer {
+        line-height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        margin-left: 2%;
+        p{
+            flex-direction: column;
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+            a {
+                font-size: 0.9em;
+                border: none;
+                top: 0;
+            }
+        }
+    }
+    .v-header .parallaxHeader .header {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .v-header .parallaxHeader .header .headerContent .v-infoUser {
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 360px) { 
+      .v-header .parallaxHeader .header .headerContent .headerContentBtn .showModal .v-modalForm{
+      width: 90%;
+      right: 5%;
+    }
+    
+}
 </style>

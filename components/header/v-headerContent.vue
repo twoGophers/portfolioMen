@@ -155,11 +155,6 @@ h4{
 /* github-corner */
 .github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
 
-@media (max-width: 620px) and (min-width: 20px) {
-    .v-mainHeaderContent {
-        display: none;
-    }
-}
 
 
 //Исчезновение модального окна
@@ -176,4 +171,8 @@ h4{
     50%{bottom: 50%;}
     0%{bottom: 0%;}
 }
+
+
+
+
 </style>
