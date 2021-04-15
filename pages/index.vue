@@ -81,12 +81,16 @@ body {
 
 @media screen and (max-width: 820px) {
     .v-header .parallaxHeader .header .headerTop ul {
+        margin-top: 5px;
         transition: 0.5s;
-        justify-content: space-around;
+        justify-content: space-between;
     }
       .v-header .parallaxHeader .header .headerContent .headerContentBtn .showModal .v-modalForm{
       width: 60%;
       right:  20%;
+    }
+    .v-header .parallaxHeader .header .headerContent .v-infoUser {
+        width: 100%;
     }
 }
 
@@ -125,25 +129,7 @@ body {
 }
 
 @media screen and (max-width: 390px) {
-    .v-header .parallaxHeader .header .headerContent .contactUser .contactUserContainer {
-        line-height: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: flex-start;
-        margin-left: 2%;
-        p{
-            flex-direction: column;
-            display: flex;
-            margin: 0px;
-            padding: 0px;
-            a {
-                font-size: 0.9em;
-                border: none;
-                top: 0;
-            }
-        }
-    }
+
     .v-header .parallaxHeader .header {
         width: 100%;
         margin-left: 0px;
