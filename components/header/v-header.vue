@@ -148,5 +148,9 @@ export default {
 }
 
 
-
+@media screen and (max-width: 375px) {
+    .header .headerTop ul {
+        justify-content: space-between;
+    }
+}
 </style>
