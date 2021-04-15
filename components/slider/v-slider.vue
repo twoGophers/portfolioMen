@@ -288,12 +288,16 @@ import showItemSlider from "./v-showItemSlider"
     .swiper-button-prev, .swiper-button-next{
         z-index: 1;
         top: 40%;
-        padding: 8px 14px;
+        padding: 8px 4px;
         border-radius: 50%;
         background: #07cb79;
         opacity: 0.7;
         transition: 0.3s;
         margin: 1%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         position: absolute;
         border: 1px solid #07cb79;
@@ -303,10 +307,10 @@ import showItemSlider from "./v-showItemSlider"
         animation: Gradient 5s ease infinite;
         transition: 0.3s;
 
-        &:hover{
-          //background: #0ae68a;
-          border: 1px solid #0ae68a;
-        }
+        // &:hover{
+        //   //background: #0ae68a;
+        //   border: 1px solid #0ae68a;
+        // }
         &:active{
           //background: #0ae68a;
           transform: scale(0.9);
@@ -318,12 +322,20 @@ import showItemSlider from "./v-showItemSlider"
     }
     .swiper-button-prev::after{
       content: " < ";
+      color: rgb(214, 253, 243);
       width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
     }
     .swiper-button-next::before{
       content: " > ";
+      color: rgb(214, 253, 243);
       width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     

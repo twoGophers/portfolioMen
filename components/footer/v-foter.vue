@@ -161,6 +161,11 @@ export default {
     .itemImagesFooter1 {
       height: 30%;
       width: 100%;
+      .signature{
+        &::before {
+          font-size: 0.8em;
+        }
+      }
     }
   }
 }
