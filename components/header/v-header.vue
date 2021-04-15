@@ -154,6 +154,7 @@ export default {
             ul {
                 display: flex;
                 justify-content: space-between;
+                border: 5px solid black;
             }
         }
         
