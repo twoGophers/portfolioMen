@@ -132,15 +132,21 @@ body {
     }
 }
 
+@media screen and (max-width: 375px) {
+  .contactUser .contactUserContainer_block1 {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 0.9em;
+    }
+  }
+}
+
 @media screen and (max-width: 360px) { 
       .v-header .parallaxHeader .header .headerContent .headerContentBtn .showModal .v-modalForm{
       width: 90%;
       right: 5%;
     }
-      .v-header .parallaxHeader .header .headerContent .contactUser  .contactUserContainer_block1 {
-        display: flex;
-        flex-direction: column;
-      }
 }
 
 </style>
