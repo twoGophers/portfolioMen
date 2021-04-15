@@ -112,12 +112,12 @@ export default {
                 justify-content: flex-end;
                 ul{
                     display: flex;
-                    justify-content: space-around;
-                    width: 40%;
+                    justify-content: flex-end;
+                    width: 100%;
                     li{
                         cursor: pointer;
                         display: inline;
-                        
+                        margin: 1%;
                         a{
                             font-size: 0.9em;
                         }

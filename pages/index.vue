@@ -81,17 +81,12 @@ body {
 
 @media screen and (max-width: 820px) {
     .v-header .parallaxHeader .header .headerTop ul {
-        margin-top : 10px;
         transition: 0.5s;
-        width: 50%;
+        justify-content: space-around;
     }
       .v-header .parallaxHeader .header .headerContent .headerContentBtn .showModal .v-modalForm{
       width: 60%;
       right:  20%;
-    }
-    .v-header .parallaxHeader .header .headerTop ul {
-        transition: 0.5s;
-        width: 100%;
     }
 }
 
