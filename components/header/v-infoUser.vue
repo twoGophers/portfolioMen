@@ -40,10 +40,22 @@ export default {
         color:transparent;
     }
     .infoUser{
-        width: 100%;
+        width: 80%;
         .nameStyle{
             font-size: 1.5em;
         }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .v-header .parallaxHeader .header .infoUser {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .v-header .parallaxHeader .header .infoUser {
+        width: 100%;
     }
 }
 </style>

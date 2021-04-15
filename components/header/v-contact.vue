@@ -35,7 +35,7 @@ export default {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            margin: 2%;
+            margin: 3%;
             a {
                 box-shadow: none;
                 background: none;
@@ -53,6 +53,15 @@ export default {
             }
         }
         
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contactUser .contactUserContainer .contactUserContainer_block1{
+        flex-direction: column;
+        p{
+            margin: 3%;
+        }
     }
 }
 </style>

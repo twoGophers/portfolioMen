@@ -148,5 +148,25 @@ export default {
 }
 
 
+@media screen and (max-width: 500px){
+    .v-header .parallaxHeader .header .headerTop ul {
+        margin-top: 5px;
+        justify-content: space-between;
+    }
+}
 
+@media screen and (max-width: 400px){
+    .v-header .parallaxHeader .header{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .v-header .parallaxHeader .header .headerTop ul {
+        justify-content: center;
+        margin: 0px;
+    }
+}
 </style>
