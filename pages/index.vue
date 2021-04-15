@@ -88,8 +88,9 @@ body {
   .v-header .parallaxHeader .header .headerTop ul {
     margin-top: 5px;
     transition: 0.5s;
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .v-header
     .parallaxHeader
@@ -102,8 +103,6 @@ body {
     right: 20%;
   }
 }
-
-
 
 @media screen and (max-width: 470px) {
   .v-header
@@ -151,8 +150,6 @@ body {
     margin-right: 0px;
   }
 }
-
-
 
 @media screen and (max-width: 360px) {
   .v-header
