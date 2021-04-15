@@ -54,6 +54,7 @@ import { Swiper, SwiperSlide, Navigation, Pagination } from 'vue-awesome-swiper'
 import 'swiper/swiper.scss';
 import showItemSlider from "./v-showItemSlider"
 
+
   export default {
     name : 'swiper-nuxt',
 
@@ -143,11 +144,29 @@ import showItemSlider from "./v-showItemSlider"
           on: {
             resize: () => {
               this.$refs.swiper.$swiper.changeDirection(
-                window.innerWidth <= 360
+                window.innerWidth <= 120
                   ? 'vertical'
                   : 'horizontal'
               )
             }
+          },
+          breakpoints: {
+            150: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            720 : {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1070: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
           }
         },
         pagination: {
@@ -178,9 +197,8 @@ import showItemSlider from "./v-showItemSlider"
       itemSlider(event) {
         this.showItemSlider = [];
         return this.showItemSlider.push(event);
-      }
+      },
     },
-
   }
 </script>
 
@@ -191,22 +209,82 @@ import showItemSlider from "./v-showItemSlider"
 
 .example{
   width: 100%;
+
+  animation: showSlider 0.8s;
+  animation-fill-mode: both;
+  animation-delay: 0.8s;
+  transition: 0.8s all;
+
+  position: relative;
   .swiper{
-    width: 90%;
+    width: 80%;
     .swiper-slide{
       height: 230px;
       margin: 0;
       padding: 0;
       display: flex;
+      cursor: pointer;
+
+      position: relative; 
+      animation: showSlider 0.8s;
+      animation-fill-mode: both;
+      animation-delay: 0.8s;
+      transition: 0.8s all;
       .fotoItem{
         display: flex;
         width: 100%;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+
+//Анимация (тень) при  наведении на блок
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          //z-index: 2;
+          display: block;
+          content: "";
+          width: 0;
+          height: 0;
+          background: rgba(0,0,0,.2);
+          border-radius: 100%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+        }
+        &:hover::before {
+          animation: circle .5s linear;
+          animation-fill-mode: forwards;
+        }
+        &:active::before {
+          animation: circleNo .2s linear;
+          animation-fill-mode: forwards;
+        }
+
+//
         img {
           width: 100%;
           border-radius: 10px;
         }
       }
     }
+
+    .swiper-slide:nth-child(1){
+      animation-delay: 1s;
+    }
+    .swiper-slide:nth-child(2){
+      animation-delay: 1.1s;
+    }
+    .swiper-slide:nth-child(3){
+      animation-delay: 1.2s;
+    }
+    .swiper-slide:nth-child(4){
+      animation-delay: 1.3s;
+    }
+    .swiper-slide:nth-child(5){
+      animation-delay: 1.4s;
+    }
+
     .swiper-button-prev, .swiper-button-next{
         z-index: 1;
         top: 40%;
@@ -230,7 +308,7 @@ import showItemSlider from "./v-showItemSlider"
           border: 1px solid #0ae68a;
         }
         &:active{
-          background: #0ae68a;
+          //background: #0ae68a;
           transform: scale(0.9);
         }
 
@@ -247,18 +325,177 @@ import showItemSlider from "./v-showItemSlider"
       content: " > ";
       width: 30px;
     }
+
+    
   }
   .showItemSlider{
     margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
-    max-height: 140px;
 
     &__item{
-      width: 70%;
+      width: 60%;
+      display: flex;
+      align-items: center;
     }
   }
 }
 
+@keyframes showSlider {
+  0%{top : 50px; opacity: 0;}
+  100%{top : 0px; opacity: 1;}
+}
+
+//Наведение на блок itemSlider
+@keyframes circle {
+	0% {
+    opacity: .5; 
+    background: rgba(139, 216, 109, 0.466);
+  }
+	40% {
+    opacity: 0.7; 
+    background: rgba(193, 194, 193, 0.329);
+  }
+	100% {
+    width: 150%; 
+    height: 250%;
+    opacity: 1;
+  }
+}
+
+//Нажатие на блок itemSlider 
+@keyframes circleNo {
+  0%{
+    width: 150%; 
+    height: 200%;
+    opacity: 1;}
+  50%{
+    opacity: 0.7; 
+    background: rgba(193, 194, 193, 0.329);
+  }
+  100%{
+    opacity: .5; 
+    background: rgba(139, 216, 109, 0.466);
+  }
+}
+
+
+
+
+@media screen and (max-width: 870px){
+    .example .showItemSlider__item {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 660px){ 
+    .example .swiper {
+      width: 60%;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 820px){ 
+    .example .swiper {
+      width: 60%;
+    }
+}
+
+@media (max-width: 550px) and (min-width: 320px){ 
+  .example .swiper {
+      width: 80%;
+    }
+}
+
+@media screen and (max-width: 380px){
+  .example .swiper {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width : 1100px) {
+  .example .showItemSlider .showItemSlider__item {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width : 820px) {
+  .example .showItemSlider .showItemSlider__item {
+    width: 90%;
+  }
+}
+
+@media (min-width: 660px) and (max-width : 720px) {
+  .example .showItemSlider .showItemSlider__item {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width : 660px) {
+    .example .showItemSlider .showItemSlider__item .v-showItemSlider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .v-showItemSlider_img {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    .v-showItemSlider_content{
+      margin-top: 10px;
+      width: 70%;
+      .btnCon{
+        button {
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 660px) {
+  .example .showItemSlider .showItemSlider__item .v-showItemSlider .v-showItemSlider_content{
+    width: 100%;
+    .btnCon{
+        button {
+          width: 35%;
+        }
+      }
+  }
+}
+
+@media screen and (max-width : 420px) {
+  .example .showItemSlider .showItemSlider__item .v-showItemSlider .v-showItemSlider_img {
+    display: none;
+  }
+  .example .showItemSlider .showItemSlider__item {
+    width: 100%;
+  }
+  p {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width : 310px) {
+  .example .showItemSlider .showItemSlider__item .v-showItemSlider .v-showItemSlider_content{
+    width: 100%;
+    .btnCon{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+        button {
+          width: 45%;
+          p{
+            padding: 3%;
+          }
+        }
+      }
+  }
+  .v-showItemSlider_content .content_content .nameSite {
+    font-size: 1.3em;
+  }
+}
 </style>

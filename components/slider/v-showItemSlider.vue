@@ -112,6 +112,12 @@ export default {
     padding: 2%;
     border-radius: 10px;
 
+    overflow: hidden;
+    position: relative;
+    animation: portfolioItem 2s ease-in-out;
+    animation-fill-mode: both;
+    transition: 2s all;
+
     .v-showItemSlider_img{
         width: 40%;
         display: flex;
@@ -230,14 +236,20 @@ export default {
             }
         }
     }
+
+    
+
     &_content{
         border: 1px solid #07cb79;
         width: 60%;
         display: flex;
-        padding: 0% 5%;
+        padding: 0% 5% 3% 5%;
         justify-content: center;
         align-content: center;
         flex-direction: column;
+        height: 340px;
+
+
         .content{
             height: 80%;
             display: flex;
@@ -310,6 +322,7 @@ export default {
             display: flex;
             flex-direction: row;
 
+            width: 100%;
             transition: 0.3s;
             button {
                 width: 30%;
@@ -350,4 +363,18 @@ export default {
         }
     }
 }
+
+@keyframes portfolioItem {
+    0%{height:  0%; opacity: 0;}
+    100%{height: 100%; opacity: 1;}
+}
+
+
+@media (min-width : 660px) and (max-width: 1270px){
+    .v-showItemSlider_content .btnCon button {
+        width: 45%;
+    }
+}
+
+
 </style>

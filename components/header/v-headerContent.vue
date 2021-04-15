@@ -30,9 +30,11 @@
                     </div>
 
                     <div class="showModal">
-                        <vModalForm 
-                        v-show="showInside"
-                        />
+                        <transition name="fade">
+                            <vModalForm 
+                            v-show="showInside"
+                            />
+                        </transition>
                     </div>
                     
             </div>
@@ -92,6 +94,7 @@ export default {
     mounted() {
         window.addEventListener("scroll", this.onScroll);
     },
+
     //Закрытие модального окна по нажатию кнопки
     created() {
         eventBus.$on("showModal", data => {
@@ -158,4 +161,19 @@ h4{
     }
 }
 
+
+//Исчезновение модального окна
+ .fade-leave-active {
+  transition: opacity;
+}
+.fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  animation: showModal-no 1s linear;
+  animation-fill-mode: both;
+}
+
+@keyframes showModal-no {
+    100%{bottom: 100%;}
+    50%{bottom: 50%;}
+    0%{bottom: 0%;}
+}
 </style>

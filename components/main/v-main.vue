@@ -8,14 +8,16 @@
 <p style="position: fixed; top : 50px">{{this.windowHeight}}</p>
 
 <!--Обо мне-->
-        <div class="hrLine1"
+        <div 
+        class="hrLine1"
         v-show="showAbout"
         >
             <vHrLine1 />
             <vSkill />
         </div>
 <!--Портфолио-->
-        <div class="hrLine2"
+        <div 
+        class="hrLine2"
         v-show="showPortfolio"
         >
             <vHrLine2 />
@@ -35,6 +37,8 @@ import vSkill from "./v-skill"
 import vSlider from "../slider/v-slider"
 
 
+import {eventSlider} from "../../plugins/main"
+
 export default {
     name: "v-main",
     data() {
@@ -46,6 +50,7 @@ export default {
             test2 : 0,
             windowWidth: 0,
             windowHeight: 0,
+            eventSlider : 2,
         }
     },
     components : {
@@ -54,7 +59,8 @@ export default {
         vHrLine1,
         vHrLine2,
         vSkill,
-        vSlider
+        vSlider,
+
     },
     methods: {
         onScroll(event) {
@@ -73,6 +79,7 @@ export default {
             } else {
                 this.showPortfolio = false;
             }
+
 
         },
 
@@ -119,10 +126,7 @@ export default {
 .v-main{
     display: flex;
     flex-direction: column;
-
-    .test{
-        height: 600px;
-    }
-
+    transition: 1s;
+    margin-bottom: 50px;
 }
 </style>

@@ -45,6 +45,7 @@ export default {
 .v-skill{
     display: flex;
     justify-content: center;
+    transition: 1s;
     //border: 1px solid black;
     margin: 0;
     .skillMen{

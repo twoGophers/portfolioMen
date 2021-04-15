@@ -2,9 +2,7 @@
   <div class="v-modalForm">
     <div class="v-modalForm_item">
 
-        <vFormItem 
-          
-        />
+        <vFormItem />
     </div>
   </div>
 </template>
@@ -27,9 +25,6 @@ export default {
       async logout() {
         await this.$store.dispatch("logout")
       },
-      showModal(text) {
-        this.$emit("showModal", this.text)
-      }
     },
 }
 </script>
@@ -44,10 +39,20 @@ export default {
   overflow: hidden;
   top: 1%;
   margin-left: 8%;
+
+  animation: showModal 1s linear;
+  animation-fill-mode: both;
+  transition: 0.3s;
   &_item{
     width: 100%;
-
   }
 }
+
+@keyframes showModal {
+  0%{bottom: 100%;}
+  50%{bottom: 50%;}
+  100%{bottom: 0%;}
+}
+
 
 </style>

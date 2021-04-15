@@ -2,8 +2,7 @@
 <div class="app">
   <vHeader />
   <vMain />
-
-  <div class="test" style="height:500px"></div>
+  <vFooter />
 </div>
 </template>
 
@@ -12,6 +11,7 @@
 
 import vHeader from "../components/header/v-header"
 import vMain from "../components/main/v-main"
+import vFooter from "../components/footer/v-foter"
 
 
 export default {
@@ -19,6 +19,7 @@ export default {
   components : {
     vHeader,
     vMain,
+    vFooter
   },
   data () {
       return {
@@ -29,6 +30,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 
 li {
  list-style-type: none;
@@ -62,4 +64,6 @@ body {
 .app {
   width: 100%;
 }
+
+
 </style>

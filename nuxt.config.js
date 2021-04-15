@@ -20,6 +20,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -66,8 +67,16 @@ export default {
           remoteConfig: true
         }
       }
-    ]
+    ],
+    //Стили keyframes
+    //'@nuxtjs/style-resources',
   ],
+
+  // styleResources: {
+  //   scss: [
+  //    '~/assets/kyeframes/kyeframes.scss', // путь к вашему файлу
+  //   ],
+  //  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
