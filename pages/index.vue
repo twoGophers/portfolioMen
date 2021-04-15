@@ -89,22 +89,20 @@ body {
       width: 60%;
       right:  20%;
     }
-}
-
-
-@media screen and (max-width: 670px) {
-    .v-header .parallaxHeader .header .headerTop ul {
-        transition: 0.5s;
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 500px) {
     .v-header .parallaxHeader .header .headerTop ul {
         transition: 0.5s;
         width: 100%;
     }
 }
+
+
+// @media screen and (max-width: 670px) {
+//     .v-header .parallaxHeader .header .headerTop ul {
+//         transition: 0.5s;
+//         width: 70%;
+//     }
+// }
+
 
 @media screen and (max-width: 470px) {
     .v-header .parallaxHeader .header .headerContent .contactUser .contactUserContainer{
@@ -159,9 +157,7 @@ body {
     .v-header .parallaxHeader .header .headerContent .v-infoUser {
         padding: 0px;
     }
-    .v-header .parallaxHeader .header .headerTop ul {
-      width: 100%;
-    }
+
 }
 
 @media screen and (max-width: 360px) { 
@@ -169,8 +165,6 @@ body {
       width: 90%;
       right: 5%;
     }
-    .v-header .parallaxHeader .header .headerTop ul {
-      width: 100%;
-    }
+
 }
 </style>
