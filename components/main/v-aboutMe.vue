@@ -74,6 +74,7 @@ export default {
             display: flex;
             img {
                 width: 100%;
+                height: 100%;
                 border: 3px solid white;
                 transition: 0.5s ease;
             }

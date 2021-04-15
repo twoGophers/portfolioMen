@@ -105,11 +105,9 @@ export default {
 @media screen and (max-width: 820px) {
   .v-footer {
     .itemImagesFooter {
-      border: 1px solid black;
       width: 70%;
     }
     .itemImagesFooter1 {
-      border: 1px solid black;
       width: 30%;
     }
   }
@@ -123,7 +121,6 @@ export default {
     align-items: center;
     .itemImagesFooter {
       height: 60%;
-      border: 1px solid black;
       width: 90%;
     }
     .itemImagesFooter1 {
@@ -141,9 +138,6 @@ export default {
       width: 100%;
       .footerAdress {
         margin: 10px;
-        img {
-          border: 1px solid black;
-        }
       }
     }
     .itemImagesFooter1 {
