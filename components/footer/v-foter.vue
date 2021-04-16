@@ -39,6 +39,7 @@ export default {
 
 <style lang="scss">
 .v-footer {
+  transition: 0.5s;
   display: flex;
   flex-direction: row;
   width: 100%;

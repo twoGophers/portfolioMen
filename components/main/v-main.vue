@@ -10,7 +10,7 @@
 <!--Обо мне-->
         <div 
         class="hrLine1"
-        v-show="showAbout"
+        v-show="showSkill"
         >
             <vHrLine1 />
             <vSkill />
@@ -45,6 +45,7 @@ export default {
         return {
             window: null,
             showAbout : false,
+            showSkill : false,
             showPortfolio : false,
             test : 0,
             test2 : 0,
@@ -69,9 +70,9 @@ export default {
             this.windowHeight = document.documentElement.clientHeight;
 
             if(this.test > 190) {
-                this.showAbout = true;
+                this.showSkill = true;
             } else {
-                this.showAbout = false;
+                this.showSkill = false;
             }
 
             if(this.test > 550) {
@@ -80,6 +81,17 @@ export default {
                 this.showPortfolio = false;
             }
 
+            if(this.test > 600 && this.windowWidth <= 375) {
+                this.showSkill = true;
+            } else {
+                this.showSkill = false;
+            }
+
+            if(this.test > 900 && this.windowWidth <= 375) {
+                this.showPortfolio = true;
+            } else {
+                this.showPortfolio = false;
+            }
 
         },
 

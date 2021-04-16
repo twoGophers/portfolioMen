@@ -136,6 +136,7 @@ import showItemSlider from "./v-showItemSlider"
           observeParents: true,
           slidesPerView: 3,
           spaceBetween: 30,
+          loop : true,
           direction: 'horizontal',
           navigation: {
             nextEl: '.swiper-button-next',
@@ -370,7 +371,7 @@ import showItemSlider from "./v-showItemSlider"
     background: rgba(193, 194, 193, 0.329);
   }
 	100% {
-    width: 150%; 
+    width: 200%; 
     height: 250%;
     opacity: 1;
   }
