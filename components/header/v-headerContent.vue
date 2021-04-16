@@ -10,8 +10,9 @@
                 :loop="3"
                 :wrapper="'h4'"
                 ></typical>
-            
-            <span class="userTitle">Разработака web-приложений с нуля по макету и их продвижение</span>
+            <div class="blockTitle">
+                <span class="userTitle">Разработака web-приложений с нуля по макету и их продвижение</span>
+            </div>
             <div class="headerContentBtn">
                     <div class="btmModal">
                         <template>
@@ -112,18 +113,22 @@ export default {
     margin-bottom: 1%;
     height: 50px;
     }
-    .userTitle {
+    .blockTitle {
+        display: flex;
+        flex-wrap: wrap;
+
+            .userTitle {
             background-image:linear-gradient(
             to bottom,
             rgb(250, 248, 248) 0%,
             rgb(214, 214, 216) 100%
-        );
-        background-clip:text;
-        --webkit-background-clip:text;
-        color:transparent;
-        display: flex;
-        flex-wrap: wrap;
+            );
+            background-clip:text;
+            --webkit-background-clip:text;
+            color:transparent;
+            }
     }
+
     .headerContentBtn{
         width: auto;
         margin-top: 5%;
