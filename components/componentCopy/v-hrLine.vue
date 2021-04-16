@@ -60,6 +60,7 @@ export default {
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
+        color:rgb(68, 68, 68);
     }
 
     &::before,

@@ -112,7 +112,7 @@ export default {
     margin-bottom: 1%;
     height: 50px;
     }
-    .userTitle{
+    .userTitle {
             background-image:linear-gradient(
             to bottom,
             rgb(250, 248, 248) 0%,
@@ -121,6 +121,8 @@ export default {
         background-clip:text;
         --webkit-background-clip:text;
         color:transparent;
+        display: flex;
+        flex-wrap: wrap;
     }
     .headerContentBtn{
         width: auto;
