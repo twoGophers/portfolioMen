@@ -1,5 +1,8 @@
 <template>
-    <div class="v-main">
+
+<!--Обо мне-->
+    <div 
+    class="v-main">
 
         <vHrLine />
         <vAboutMe />
@@ -7,22 +10,24 @@
 <p style="position: fixed; top : 30px">{{this.windowWidth}}</p>
 <p style="position: fixed; top : 50px">{{this.windowHeight}}</p>
 
-<!--Обо мне-->
+<!--Скиллы-->
+<!--v-show="showSkill"-->
         <div 
         class="hrLine1"
-        v-show="showSkill"
+        
         >
             <vHrLine1 />
             <vSkill />
         </div>
+        
 <!--Портфолио-->
+<!--v-show="showPortfolio"-->
         <div 
         class="hrLine2"
-        v-show="showPortfolio"
+        
         >
             <vHrLine2 />
             <vSlider />
-
         </div>
 
     </div>
