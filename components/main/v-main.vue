@@ -1,34 +1,43 @@
 <template>
 
-<!--Обо мне-->
-    <div 
+<div 
     class="v-main">
 
-        <vHrLine />
-        <vAboutMe />
-<p style="position: fixed; top : 10px">{{this.test}}</p>
-<p style="position: fixed; top : 30px">{{this.windowWidth}}</p>
-<p style="position: fixed; top : 50px">{{this.windowHeight}}</p>
+        <!-- <p style="position: fixed; top : 10px">{{this.test}}</p>
+        <p style="position: fixed; top : 30px">{{this.windowWidth}}</p>
+        <p style="position: fixed; top : 50px">{{this.windowHeight}}</p> -->
 
-<!--Скиллы-->
-<!--v-show="showSkill"-->
-        <div 
-        class="hrLine1"
-        
-        >
-            <vHrLine1 />
-            <vSkill />
+<!--Обо мне-->
+        <div>
+            <vHrLine />
+            <vAboutMe />
+            
         </div>
-        
-<!--Портфолио-->
-<!--v-show="showPortfolio"-->
-        <div 
-        class="hrLine2"
-        
-        >
-            <vHrLine2 />
-            <vSlider />
-        </div>
+
+    <!--Скиллы-->
+    <!--v-show="showSkill"-->
+    <transition>
+            <div 
+            class="hrLine1" 
+            v-show="showSkill"
+            >
+                <vHrLine1 />
+                <vSkill />
+            </div>
+    </transition>
+
+    <!--Портфолио-->
+    <!--v-show="showPortfolio"-->
+    <transition>
+            <div 
+            class="hrLine2"
+            v-show="showPortfolio"
+            >
+                <vHrLine2 />
+                <vSlider />
+            </div>
+    </transition>
+
 
     </div>
 </template>
@@ -57,6 +66,7 @@ export default {
             windowWidth: 0,
             windowHeight: 0,
             eventSlider : 2,
+
         }
     },
     components : {
@@ -92,21 +102,23 @@ export default {
                 this.showSkill = false;
             }
 
-            if(this.test > 900 && this.windowWidth <= 375) {
-                this.showPortfolio = true;
-            } else {
-                this.showPortfolio = false;
-            }
+//ошибка 
+
+            // if(this.test > 900 && this.windowWidth <= 375) {
+            //     this.showPortfolio = true;
+            // } else {
+            //     this.showPortfolio = false;
+            // }
 
         },
 
-        // getWindowWidth(event) {
-        // this.windowWidth = document.documentElement.clientWidth;
-        // },
+        getWindowWidth(event) {
+        this.windowWidth = document.documentElement.clientWidth;
+        },
 
-        // getWindowHeight(event) {
-        // this.windowHeight = document.documentElement.clientHeight;
-        // }
+        getWindowHeight(event) {
+        this.windowHeight = document.documentElement.clientHeight;
+        }
     },
 
     //определение скролла, относительно верха
@@ -146,4 +158,6 @@ export default {
     transition: 1s;
     margin-bottom: 50px;
 }
+
+
 </style>
