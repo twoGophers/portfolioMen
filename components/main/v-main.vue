@@ -3,9 +3,9 @@
 <div 
     class="v-main">
 
-        <!-- <p style="position: fixed; top : 10px">{{this.test}}</p>
+        <p style="position: fixed; top : 10px">{{this.test}}</p>
         <p style="position: fixed; top : 30px">{{this.windowWidth}}</p>
-        <p style="position: fixed; top : 50px">{{this.windowHeight}}</p> -->
+        <p style="position: fixed; top : 50px">{{this.windowHeight}}</p>
 
 <!--Обо мне-->
         <div>
@@ -90,17 +90,17 @@ export default {
                 this.showSkill = false;
             }
 
-            if(this.test > 550) {
+            if(this.test > 500) {
                 this.showPortfolio = true;
             } else {
                 this.showPortfolio = false;
             }
 
-            if(this.test > 600 && this.windowWidth <= 375) {
-                this.showSkill = true;
-            } else {
-                this.showSkill = false;
-            }
+            // if(this.test > 600 && this.windowWidth <= 375) {
+            //     this.showSkill = true;
+            // } else {
+            //     this.showSkill = false;
+            // }
 
 //ошибка 
 
