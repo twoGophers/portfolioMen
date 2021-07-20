@@ -3,9 +3,9 @@
 <div 
     class="v-main">
 
-        <p style="position: fixed; top : 10px">{{this.test}}</p>
+        <!-- <p style="position: fixed; top : 10px">{{this.test}}</p>
         <p style="position: fixed; top : 30px">{{this.windowWidth}}</p>
-        <p style="position: fixed; top : 50px">{{this.windowHeight}}</p>
+        <p style="position: fixed; top : 50px">{{this.windowHeight}}</p> -->
 
 <!--Обо мне-->
         <div>
