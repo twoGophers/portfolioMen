@@ -3,7 +3,7 @@
     <div class="fotoUser">
       <div class="fotoUser-item">
         <img
-          :src="require('@/assets/images/sm.jpg')"
+          :src="require('@/assets/images/70W4D3xv4pA.jpg')"
           alt
           srcset
           @mouseover="mouseEnter"
