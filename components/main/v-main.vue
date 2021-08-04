@@ -69,7 +69,7 @@ export default {
 
       if (this.test > 190) {
         this.showSkill = true;
-        console.log(this.test);
+
       } else {
         this.showSkill = false;
       }

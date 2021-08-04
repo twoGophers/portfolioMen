@@ -13,6 +13,7 @@
     <div class="v-aboutMeMain-item-content">
       <p>{{about_item.text1}}</p>
       <p>{{about_item.text2}}</p>
+      
     </div>
   </div>
 </template>
@@ -82,8 +83,10 @@ export default {
       line-height: 25px;
       font-size: 1em;
     }
+
   }
 }
+
 
 @keyframes blocFoto {
   10% {
