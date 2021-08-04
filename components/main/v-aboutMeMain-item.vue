@@ -7,13 +7,30 @@
         @mouseleave="mouseLeave"
         :style="styleRamk"
       >
-        <img :src="require('@/assets/images/' + about_item.img)" alt srcset />
+        <img 
+        :src="require('@/assets/images/' + about_item.img)" 
+        alt 
+        srcset 
+        
+        />
       </div>
     </div>
     <div class="v-aboutMeMain-item-content">
       <p>{{about_item.text1}}</p>
       <p>{{about_item.text2}}</p>
-      
+
+            <div class="aboutLinear"
+            v-show="showLineAbout"
+            >
+              <div 
+              class="aboutLinear-item"
+              :style="styleShowLinaeAbout"
+              
+              >
+              </div>
+            </div>
+
+
     </div>
   </div>
 </template>
@@ -31,15 +48,21 @@ export default {
   },
   data() {
     return {
-      styleRamk: null
+      styleRamk: null,
+      showLineAbout : false,
+      styleShowLinaeAbout : null
     };
   },
   methods: {
     mouseEnter() {
-      this.styleRamk = `border: 2px solid white`;
+      this.styleRamk = `border: 2px solid white`,
+      this.styleShowLinaeAbout = `background: linear-gradient(90deg, rgba(143,143,143,1) 0%, rgba(193,245,194,0.7707457983193278) 40%, rgba(131,254,141,0.7371323529411764) 100%);`,
+      this.showLineAbout = true
     },
     mouseLeave() {
-      this.styleRamk = `border: 2px solid #07cb79`;
+      this.styleRamk = `border: 2px solid #07cb79`,
+      this.styleShowLinaeAbout = `transition : width 2s, width : 0%`,
+      this.showLineAbout = false
     }
   }
 };
@@ -83,9 +106,39 @@ export default {
       line-height: 25px;
       font-size: 1em;
     }
+    .aboutLinear {
+      width: 100%;
+      height: 80%;
+      margin-top: -2px;
+      z-index: -1;
+      .aboutLinear-item {
+          width: 0%;
+          height: 1px;
+          display: flex;
+          justify-content: center;
+      }
+      &::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        position: relative;
+        display: block;
+        transition: width .3s ease-in-out;
 
+        animation: showLineAbout 0.5s linear;
+        animation-fill-mode: both;
+        background: linear-gradient(90deg, rgba(143,143,143,1) 0%, rgba(193,245,194,0.7707457983193278) 40%, rgba(131,254,141,0.7371323529411764) 100%);
+      }
+    }
   }
 }
+
+@keyframes showLineAbout {
+  100% {
+    width: 100%;
+  }
+}
+
 
 
 @keyframes blocFoto {
