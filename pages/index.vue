@@ -3,7 +3,7 @@
     <div class="loading">
       <vLoading />
     </div>
-    <div v-show="loadingMain" class="mainIndex">
+    <div  class="mainIndex">
       <vHeader />
       <vMain />
       <vFooter />
@@ -29,21 +29,19 @@ export default {
   },
   data() {
     return {
-      loadingMain : false
+      
     };
   },
   methods: {
-    showMain() {
-      this.loadingMain = true
-    }
+    
   },
   mounted() {
-    setTimeout(() => this.showMain(), 1300)
+    
   },
 };
 </script>
 
-<style lang="scss">
+<style >
 li {
   list-style-type: none;
 }
@@ -53,7 +51,7 @@ a {
   color: white;
   padding: 7px 15px;
   border-radius: 30px;
-  //background-color:rgba(0,0,0,.1);
+  background-color:rgba(0,0,0,.1);
   border: 1px solid #07cb79;
 }
 a:hover {
