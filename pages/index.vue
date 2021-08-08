@@ -5,6 +5,7 @@
     </div>
     <div  class="mainIndex">
       <vHeader />
+      <p>Hello</p>
       <vMain />
       <vFooter />
     </div>
