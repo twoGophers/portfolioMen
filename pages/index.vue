@@ -1,13 +1,20 @@
 <template>
   <div class="app">
-    <vHeader />
-    <vMain />
-    <vFooter />
+    <div class="loading">
+      <vLoading />
+    </div>
+    <div v-show="loadingMain" class="mainIndex">
+      <vHeader />
+      <vMain />
+      <vFooter />
+    </div>
+
   </div>
 </template>
 
 
 <script>
+import vLoading from "../components/loading/loading";
 import vHeader from "../components/header/v-header";
 import vMain from "../components/main/v-main";
 import vFooter from "../components/footer/v-foter";
@@ -15,13 +22,24 @@ import vFooter from "../components/footer/v-foter";
 export default {
   name: "app",
   components: {
+    vLoading,
     vHeader,
     vMain,
     vFooter
   },
   data() {
-    return {};
-  }
+    return {
+      loadingMain : false
+    };
+  },
+  methods: {
+    showMain() {
+      this.loadingMain = true
+    }
+  },
+  mounted() {
+    setTimeout(() => this.showMain(), 1300)
+  },
 };
 </script>
 

@@ -1,9 +1,22 @@
 <template>
   <div>
+    <vLoading />
     <Nuxt />
+    
   </div>
 </template>
 
+
+
+<script>
+import vLoading from '../components/loading/loading'
+
+export default {
+  components : {
+    vLoading
+  }
+}
+</script>
 <style>
 html {
   font-family:

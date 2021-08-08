@@ -2,6 +2,7 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
+  loading: "~/components/loading/loading.vue",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'test-nuxt',
@@ -86,5 +87,5 @@ export default {
   target: 'static',
   router: {
     base: '/portfolioMen/'
-  }
+  },
 }
