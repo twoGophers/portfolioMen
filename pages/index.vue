@@ -3,9 +3,8 @@
     <div class="loading">
       <vLoading />
     </div>
-    <div  class="mainIndex">
+    <div v-show="showMain" class="mainIndex">
       <vHeader />
-      <p>Hello</p>
       <vMain />
       <vFooter />
     </div>
@@ -30,14 +29,16 @@ export default {
   },
   data() {
     return {
-      
+      showMain : false
     };
   },
   methods: {
-    
+    showLoading () {
+      this.showMain = true
+    }
   },
   mounted() {
-    
+    setTimeout(() => this.showLoading(), 1200)
   },
 };
 </script>
