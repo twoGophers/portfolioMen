@@ -112,6 +112,7 @@ export default {
       margin-top: -2px;
       z-index: -1;
       .aboutLinear-item {
+        margin-top: -2px;
           width: 0%;
           height: 1px;
           display: flex;

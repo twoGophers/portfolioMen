@@ -73,6 +73,10 @@ export default {
           flex-direction: row;
           align-items: center;
           border-radius: 3px;
+          &:hover {
+            background: rgb(240, 239, 239);
+            transition:all 0.5s;
+          }
           .skill-img {
             //border: 1px solid black;
             width: 40px;
