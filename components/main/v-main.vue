@@ -1,8 +1,8 @@
 <template>
   <div class="v-main">
-    <!-- <p style="position: fixed; top : 10px">{{this.test}}</p>
+    <p style="position: fixed; top : 10px">{{this.test}}</p>
         <p style="position: fixed; top : 30px">{{this.windowWidth}}</p>
-    <p style="position: fixed; top : 50px">{{this.windowHeight}}</p>-->
+    <p style="position: fixed; top : 50px">{{this.windowHeight}}</p>
 
     <!--Обо мне-->
     <div>
@@ -50,7 +50,7 @@ export default {
       test2: 0,
       windowWidth: 0,
       windowHeight: 0,
-      eventSlider: 2
+      eventSlider: 2,
     };
   },
   components: {
@@ -66,7 +66,6 @@ export default {
       this.test = document.documentElement.scrollTop;
       this.windowWidth = document.documentElement.clientWidth;
       this.windowHeight = document.documentElement.clientHeight;
-
       if (this.test > 190) {
         this.showSkill = true;
 
@@ -80,17 +79,29 @@ export default {
         this.showPortfolio = false;
       }
 
-      // if(this.test > 600 && this.windowWidth <= 375) {
-      //     this.showSkill = true;
-      // } else {
-      //     this.showSkill = false;
-      // }
+      if(this.windowWidth < 1600 && this.test > 190) {
+        this.showSkill = true;
+      } else {
+        this.showSkill = false;
+      }
 
-      // if(this.test > 900 && this.windowWidth <= 375) {
-      //     this.showPortfolio = true;
-      // } else {
-      //     this.showPortfolio = false;
-      // }
+      if(this.windowWidth < 1600 && this.test >= 600) {
+        this.showPortfolio = true;
+      } else {
+        this.showPortfolio = false;
+      }
+
+      if(this.windowWidth < 1205 && this.test >= 560) {
+        this.showPortfolio = true;
+      } else {
+        this.showPortfolio = false;
+      }
+
+      if(this.windowWidth < 846 && this.test >= 520) {
+        this.showPortfolio = true;
+      } else {
+        this.showPortfolio = false;
+      }
     },
 
     getWindowWidth(event) {

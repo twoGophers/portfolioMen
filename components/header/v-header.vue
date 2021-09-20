@@ -119,7 +119,7 @@ export default {
                         display: inline;
                         margin: 1%;
                         a{
-                            font-size: 0.9em;
+                            font-size: 1.1em;
                         }
                     }
                 }
