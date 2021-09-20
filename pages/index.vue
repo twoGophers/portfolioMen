@@ -67,7 +67,6 @@ a,
 p,
 span {
   font-family: "Raleway", sans-serif;
-  font-size: 1.2rem;
 }
 p {
   color: #58666e;
