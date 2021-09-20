@@ -219,7 +219,7 @@ export default {
   .swiper {
     width: 80%;
     .swiper-slide {
-      height: 230px;
+      min-height: 240px;
       margin: 0;
       padding: 0;
       display: flex;
