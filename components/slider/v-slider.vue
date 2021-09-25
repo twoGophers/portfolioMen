@@ -52,6 +52,19 @@ export default {
         {
           id: 0,
           adressUrl: "#",
+          proectImages: "165756.png",
+          proectPlash: "165935.png",
+          proectMob: "170214.png",
+          proectName: "Магазин гитар",
+          proectInstrumen: "HTML, CSS, SCSS, Java Script, Nuxt, Vuex, Axios",
+          proectBase: "Firebase",
+          proectTime: "Срок выполнения : 2 недели",
+          proectAdaption: "Адаптация под мобильные устройства и планшеты",
+          proectAddress: "https://twogophers.github.io/guitare-test/"
+        },
+        {
+          id: 1,
+          adressUrl: "#",
           proectImages: "renissanseMen.png",
           proectPlash: "rennaisansePlash.png",
           proectMob: "rennaisansePlash.png",
@@ -63,21 +76,20 @@ export default {
           proectAddress: "https://twogophers.github.io/renaissanceV/#/"
         },
         {
-          id: 1,
+          id: 2,
           adressUrl: "https://www.youtube.com/embed/HKRkum6dV-E",
           proectImages: "shopMen.png",
           proectPlash: "plansh.png",
           proectMob: "shopMob.png",
           proectName: "Интернет магазин",
-          proectInstrumen:
-            "HTML, CSS, SCSS, Bootstrap, Java Script, Vue 2, Vuex, Axios",
+          proectInstrumen: "HTML, CSS, SCSS, Bootstrap, Java Script, Vue 2, Vuex, Axios",
           proectBase: "Firebase",
           proectTime: "Срок выполнения : 2.5 недели",
           proectAdaption: "Адаптация под мобильные устройства и планшеты",
           proectAddress: "https://twogophers.github.io/pink-shop/#/"
         },
         {
-          id: 2,
+          id: 3,
           adressUrl: "https://www.youtube.com/embed/-TEjA00_TC0",
           proectImages: "stroyMen.png",
           proectPlash: "stroyPlash.png",
@@ -90,7 +102,7 @@ export default {
           proectAddress: "https://twogophers.github.io/test-kv/"
         },
         {
-          id: 3,
+          id: 4,
           adressUrl: "https://www.youtube.com/embed/iK3LppFt2vo",
           proectImages: "weatherMen.png",
           proectPlash: "weatherPlash.png",
@@ -103,7 +115,7 @@ export default {
           proectAddress: "https://twogophers.github.io/weather/index.html"
         },
         {
-          id: 4,
+          id: 5,
           adressUrl: "https://www.youtube.com/embed/efHXTIBg-5Q",
           proectImages: "tipografMen.png",
           proectPlash: "tipografPlashpng.png",
@@ -116,7 +128,7 @@ export default {
           proectAddress: "https://twogophers.github.io/jurnal-Book/index.html"
         },
         {
-          id: 5,
+          id: 6,
           adressUrl: "https://www.youtube.com/embed/cP52tOS3sQQ",
           proectImages: "goroskopMen.png",
           proectPlash: "goroscopPlash.png",
