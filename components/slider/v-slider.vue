@@ -51,7 +51,7 @@ export default {
       sliderItem: [
         {
           id: 0,
-          adressUrl: "#",
+          adressUrl: "На данный проект, обзор отсутствует",
           proectImages: "165756.png",
           proectPlash: "165935.png",
           proectMob: "170214.png",
@@ -64,7 +64,7 @@ export default {
         },
         {
           id: 1,
-          adressUrl: "#",
+          adressUrl: "На данный проект, обзор отсутствует",
           proectImages: "renissanseMen.png",
           proectPlash: "rennaisansePlash.png",
           proectMob: "rennaisansePlash.png",

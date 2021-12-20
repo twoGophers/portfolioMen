@@ -33,14 +33,14 @@
         </div>
 
         <div class="v-showItemSlider_content">
-            <div class="btnCon">
+            <!-- <div class="btnCon">
                 <button
                         @click="showInfo"
                 ><p>Информация</p> </button>
                 <button
                         @click="showInfoVideo"
                 ><p>Видео обзор</p> </button>
-            </div>
+            </div> -->
             <div class="content">
                 <div 
                     class="content_content"
