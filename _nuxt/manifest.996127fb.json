@@ -1,0 +1,9 @@
+{
+  "name": "test-nuxt",
+  "short_name": "test-nuxt",
+  "icons": [],
+  "start_url": "/portfolioMen/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "en"
+}
